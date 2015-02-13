@@ -86,7 +86,7 @@ public class LogUtils {
     public static void LOGV(String message) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.v(stackTraceElements[0].getClassName(), avoidNullString(message));
+            Log.v(stackTraceElements[1].getFileName(), avoidNullString(message));
         }
     }
 
@@ -94,14 +94,14 @@ public class LogUtils {
     public static void LOGD(String message) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.d(stackTraceElements[0].getClassName(), avoidNullString(message));
+            Log.d(stackTraceElements[1].getFileName(), avoidNullString(message));
         }
     }
 
     public static void LOGW(String message) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.w(stackTraceElements[0].getClassName(), avoidNullString(message));
+            Log.w(stackTraceElements[1].getFileName(), avoidNullString(message));
         }
     }
 
@@ -109,14 +109,14 @@ public class LogUtils {
     public static void LOGI(String message) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.i(stackTraceElements[0].getClassName(), avoidNullString(message));
+            Log.i(stackTraceElements[1].getFileName(), avoidNullString(message));
         }
     }
 
     public static void LOGE(String message) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.e(stackTraceElements[0].getClassName(), avoidNullString(message));
+            Log.e(stackTraceElements[1].getFileName(), avoidNullString(message));
         }
     }
 
@@ -124,28 +124,28 @@ public class LogUtils {
     public static void LOGD(String message, Throwable cause) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.d(stackTraceElements[0].getClassName(), avoidNullString(message), cause);
+            Log.d(stackTraceElements[1].getFileName(), avoidNullString(message), cause);
         }
     }
 
     public static void LOGV(String message, Throwable cause) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.v(stackTraceElements[0].getClassName(), avoidNullString(message), cause);
+            Log.v(stackTraceElements[1].getFileName(), avoidNullString(message), cause);
         }
     }
 
     public static void LOGI(String message, Throwable cause) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.i(stackTraceElements[0].getClassName(), avoidNullString(message), cause);
+            Log.i(stackTraceElements[1].getFileName(), avoidNullString(message), cause);
         }
     }
 
     public static void LOGW(String message, Throwable cause) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.w(stackTraceElements[0].getClassName(), avoidNullString(message), cause);
+            Log.w(stackTraceElements[1].getFileName(), avoidNullString(message), cause);
         }
     }
 
@@ -153,7 +153,7 @@ public class LogUtils {
     public static void LOGE(String message, Throwable cause) {
         if (canLog()) {
             StackTraceElement[] stackTraceElements = new Throwable().getStackTrace();
-            Log.e(stackTraceElements[0].getClassName(), avoidNullString(message), cause);
+            Log.e(stackTraceElements[1].getFileName(), avoidNullString(message), cause);
         }
     }
 
